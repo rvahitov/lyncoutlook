@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<configurationSectionModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="d0ed9acb-0435-4532-afdd-b5115bc4d562" namespace="OutlookLinkAddin.Configuration" xmlSchemaNamespace="urn://i-teco/schemas/dev/outlook-lync-addin" xmlns="http://schemas.microsoft.com/dsltools/ConfigurationSectionDesigner">
+<configurationSectionModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="d0ed9acb-0435-4532-afdd-b5115bc4d562" namespace="OutlookLincAddin.Configuration" xmlSchemaNamespace="urn://i-teco/schemas/dev/outlook-lync-addin" xmlns="http://schemas.microsoft.com/dsltools/ConfigurationSectionDesigner">
   <typeDefinitions>
     <externalType name="String" namespace="System" />
     <externalType name="Boolean" namespace="System" />
@@ -11,7 +11,7 @@
     <externalType name="TimeSpan" namespace="System" />
   </typeDefinitions>
   <configurationElements>
-    <configurationSection name="OutloookLyncAddinSection" codeGenOptions="Singleton, XmlnsProperty" xmlSectionName="outloookLyncAddin">
+    <configurationSection name="OutlookLyncAddinSection" codeGenOptions="Singleton, XmlnsProperty" xmlSectionName="outlookLyncAddinSection">
       <elementProperties>
         <elementProperty name="PhonePatterns" isRequired="true" isKey="false" isDefaultCollection="false" xmlName="phonePatterns" isReadOnly="false">
           <type>
@@ -25,6 +25,11 @@
         <attributeProperty name="Value" isRequired="true" isKey="true" isDefaultCollection="false" xmlName="value" isReadOnly="false">
           <type>
             <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/String" />
+          </type>
+        </attributeProperty>
+        <attributeProperty name="Regex" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="regex" isReadOnly="false" defaultValue="false">
+          <type>
+            <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/Boolean" />
           </type>
         </attributeProperty>
       </attributeProperties>

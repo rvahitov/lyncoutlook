@@ -8,38 +8,38 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OutlookLinkAddin.Configuration
+namespace OutlookLincAddin.Configuration
 {
     
     
     /// <summary>
-    /// The OutloookLyncAddinSection Configuration Section.
+    /// The OutlookLyncAddinSection Configuration Section.
     /// </summary>
-    public partial class OutloookLyncAddinSection : global::System.Configuration.ConfigurationSection
+    public partial class OutlookLyncAddinSection : global::System.Configuration.ConfigurationSection
     {
         
         #region Singleton Instance
         /// <summary>
-        /// The XML name of the OutloookLyncAddinSection Configuration Section.
+        /// The XML name of the OutlookLyncAddinSection Configuration Section.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.1.7")]
-        internal const string OutloookLyncAddinSectionSectionName = "outloookLyncAddin";
+        internal const string OutlookLyncAddinSectionSectionName = "outlookLyncAddinSection";
         
         /// <summary>
-        /// The XML path of the OutloookLyncAddinSection Configuration Section.
+        /// The XML path of the OutlookLyncAddinSection Configuration Section.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.1.7")]
-        internal const string OutloookLyncAddinSectionSectionPath = "outloookLyncAddin";
+        internal const string OutlookLyncAddinSectionSectionPath = "outlookLyncAddinSection";
         
         /// <summary>
-        /// Gets the OutloookLyncAddinSection instance.
+        /// Gets the OutlookLyncAddinSection instance.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.1.7")]
-        public static global::OutlookLinkAddin.Configuration.OutloookLyncAddinSection Instance
+        public static global::OutlookLincAddin.Configuration.OutlookLyncAddinSection Instance
         {
             get
             {
-                return ((global::OutlookLinkAddin.Configuration.OutloookLyncAddinSection)(global::System.Configuration.ConfigurationManager.GetSection(global::OutlookLinkAddin.Configuration.OutloookLyncAddinSection.OutloookLyncAddinSectionSectionPath)));
+                return ((global::OutlookLincAddin.Configuration.OutlookLyncAddinSection)(global::System.Configuration.ConfigurationManager.GetSection(global::OutlookLincAddin.Configuration.OutlookLyncAddinSection.OutlookLyncAddinSectionSectionPath)));
             }
         }
         #endregion
@@ -59,12 +59,12 @@ namespace OutlookLinkAddin.Configuration
         /// the parser doesn't throw an exception because it encounters the unknown "xmlns" attribute.
         /// </remarks>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.1.7")]
-        [global::System.Configuration.ConfigurationPropertyAttribute(global::OutlookLinkAddin.Configuration.OutloookLyncAddinSection.XmlnsPropertyName, IsRequired=false, IsKey=false, IsDefaultCollection=false)]
+        [global::System.Configuration.ConfigurationPropertyAttribute(global::OutlookLincAddin.Configuration.OutlookLyncAddinSection.XmlnsPropertyName, IsRequired=false, IsKey=false, IsDefaultCollection=false)]
         public string Xmlns
         {
             get
             {
-                return ((string)(base[global::OutlookLinkAddin.Configuration.OutloookLyncAddinSection.XmlnsPropertyName]));
+                return ((string)(base[global::OutlookLincAddin.Configuration.OutlookLyncAddinSection.XmlnsPropertyName]));
             }
         }
         #endregion
@@ -92,22 +92,22 @@ namespace OutlookLinkAddin.Configuration
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.1.7")]
         [global::System.ComponentModel.DescriptionAttribute("The PhonePatterns.")]
-        [global::System.Configuration.ConfigurationPropertyAttribute(global::OutlookLinkAddin.Configuration.OutloookLyncAddinSection.PhonePatternsPropertyName, IsRequired=true, IsKey=false, IsDefaultCollection=false)]
-        public virtual global::OutlookLinkAddin.Configuration.PhonePatternCollection PhonePatterns
+        [global::System.Configuration.ConfigurationPropertyAttribute(global::OutlookLincAddin.Configuration.OutlookLyncAddinSection.PhonePatternsPropertyName, IsRequired=true, IsKey=false, IsDefaultCollection=false)]
+        public virtual global::OutlookLincAddin.Configuration.PhonePatternCollection PhonePatterns
         {
             get
             {
-                return ((global::OutlookLinkAddin.Configuration.PhonePatternCollection)(base[global::OutlookLinkAddin.Configuration.OutloookLyncAddinSection.PhonePatternsPropertyName]));
+                return ((global::OutlookLincAddin.Configuration.PhonePatternCollection)(base[global::OutlookLincAddin.Configuration.OutlookLyncAddinSection.PhonePatternsPropertyName]));
             }
             set
             {
-                base[global::OutlookLinkAddin.Configuration.OutloookLyncAddinSection.PhonePatternsPropertyName] = value;
+                base[global::OutlookLincAddin.Configuration.OutlookLyncAddinSection.PhonePatternsPropertyName] = value;
             }
         }
         #endregion
     }
 }
-namespace OutlookLinkAddin.Configuration
+namespace OutlookLincAddin.Configuration
 {
     
     
@@ -140,35 +140,61 @@ namespace OutlookLinkAddin.Configuration
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.1.7")]
         [global::System.ComponentModel.DescriptionAttribute("The Value.")]
-        [global::System.Configuration.ConfigurationPropertyAttribute(global::OutlookLinkAddin.Configuration.PhonePatternElement.ValuePropertyName, IsRequired=true, IsKey=true, IsDefaultCollection=false)]
+        [global::System.Configuration.ConfigurationPropertyAttribute(global::OutlookLincAddin.Configuration.PhonePatternElement.ValuePropertyName, IsRequired=true, IsKey=true, IsDefaultCollection=false)]
         public virtual string Value
         {
             get
             {
-                return ((string)(base[global::OutlookLinkAddin.Configuration.PhonePatternElement.ValuePropertyName]));
+                return ((string)(base[global::OutlookLincAddin.Configuration.PhonePatternElement.ValuePropertyName]));
             }
             set
             {
-                base[global::OutlookLinkAddin.Configuration.PhonePatternElement.ValuePropertyName] = value;
+                base[global::OutlookLincAddin.Configuration.PhonePatternElement.ValuePropertyName] = value;
+            }
+        }
+        #endregion
+        
+        #region Regex Property
+        /// <summary>
+        /// The XML name of the <see cref="Regex"/> property.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.1.7")]
+        internal const string RegexPropertyName = "regex";
+        
+        /// <summary>
+        /// Gets or sets the Regex.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.1.7")]
+        [global::System.ComponentModel.DescriptionAttribute("The Regex.")]
+        [global::System.Configuration.ConfigurationPropertyAttribute(global::OutlookLincAddin.Configuration.PhonePatternElement.RegexPropertyName, IsRequired=false, IsKey=false, IsDefaultCollection=false, DefaultValue=false)]
+        public virtual bool Regex
+        {
+            get
+            {
+                return ((bool)(base[global::OutlookLincAddin.Configuration.PhonePatternElement.RegexPropertyName]));
+            }
+            set
+            {
+                base[global::OutlookLincAddin.Configuration.PhonePatternElement.RegexPropertyName] = value;
             }
         }
         #endregion
     }
 }
-namespace OutlookLinkAddin.Configuration
+namespace OutlookLincAddin.Configuration
 {
     
     
     /// <summary>
     /// A collection of PhonePatternElement instances.
     /// </summary>
-    [global::System.Configuration.ConfigurationCollectionAttribute(typeof(global::OutlookLinkAddin.Configuration.PhonePatternElement), CollectionType=global::System.Configuration.ConfigurationElementCollectionType.BasicMapAlternate, AddItemName=global::OutlookLinkAddin.Configuration.PhonePatternCollection.PhonePatternElementPropertyName)]
+    [global::System.Configuration.ConfigurationCollectionAttribute(typeof(global::OutlookLincAddin.Configuration.PhonePatternElement), CollectionType=global::System.Configuration.ConfigurationElementCollectionType.BasicMapAlternate, AddItemName=global::OutlookLincAddin.Configuration.PhonePatternCollection.PhonePatternElementPropertyName)]
     public partial class PhonePatternCollection : global::System.Configuration.ConfigurationElementCollection
     {
         
         #region Constants
         /// <summary>
-        /// The XML name of the individual <see cref="global::OutlookLinkAddin.Configuration.PhonePatternElement"/> instances in this collection.
+        /// The XML name of the individual <see cref="global::OutlookLincAddin.Configuration.PhonePatternElement"/> instances in this collection.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.1.7")]
         internal const string PhonePatternElementPropertyName = "pattern";
@@ -196,7 +222,7 @@ namespace OutlookLinkAddin.Configuration
         {
             get
             {
-                return global::OutlookLinkAddin.Configuration.PhonePatternCollection.PhonePatternElementPropertyName;
+                return global::OutlookLincAddin.Configuration.PhonePatternCollection.PhonePatternElementPropertyName;
             }
         }
         
@@ -210,7 +236,7 @@ namespace OutlookLinkAddin.Configuration
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.1.7")]
         protected override bool IsElementName(string elementName)
         {
-            return (elementName == global::OutlookLinkAddin.Configuration.PhonePatternCollection.PhonePatternElementPropertyName);
+            return (elementName == global::OutlookLincAddin.Configuration.PhonePatternCollection.PhonePatternElementPropertyName);
         }
         
         /// <summary>
@@ -223,57 +249,57 @@ namespace OutlookLinkAddin.Configuration
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.1.7")]
         protected override object GetElementKey(global::System.Configuration.ConfigurationElement element)
         {
-            return ((global::OutlookLinkAddin.Configuration.PhonePatternElement)(element)).Value;
+            return ((global::OutlookLincAddin.Configuration.PhonePatternElement)(element)).Value;
         }
         
         /// <summary>
-        /// Creates a new <see cref="global::OutlookLinkAddin.Configuration.PhonePatternElement"/>.
+        /// Creates a new <see cref="global::OutlookLincAddin.Configuration.PhonePatternElement"/>.
         /// </summary>
         /// <returns>
-        /// A new <see cref="global::OutlookLinkAddin.Configuration.PhonePatternElement"/>.
+        /// A new <see cref="global::OutlookLincAddin.Configuration.PhonePatternElement"/>.
         /// </returns>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.1.7")]
         protected override global::System.Configuration.ConfigurationElement CreateNewElement()
         {
-            return new global::OutlookLinkAddin.Configuration.PhonePatternElement();
+            return new global::OutlookLincAddin.Configuration.PhonePatternElement();
         }
         #endregion
         
         #region Indexer
         /// <summary>
-        /// Gets the <see cref="global::OutlookLinkAddin.Configuration.PhonePatternElement"/> at the specified index.
+        /// Gets the <see cref="global::OutlookLincAddin.Configuration.PhonePatternElement"/> at the specified index.
         /// </summary>
-        /// <param name="index">The index of the <see cref="global::OutlookLinkAddin.Configuration.PhonePatternElement"/> to retrieve.</param>
+        /// <param name="index">The index of the <see cref="global::OutlookLincAddin.Configuration.PhonePatternElement"/> to retrieve.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.1.7")]
-        public global::OutlookLinkAddin.Configuration.PhonePatternElement this[int index]
+        public global::OutlookLincAddin.Configuration.PhonePatternElement this[int index]
         {
             get
             {
-                return ((global::OutlookLinkAddin.Configuration.PhonePatternElement)(base.BaseGet(index)));
+                return ((global::OutlookLincAddin.Configuration.PhonePatternElement)(base.BaseGet(index)));
             }
         }
         
         /// <summary>
-        /// Gets the <see cref="global::OutlookLinkAddin.Configuration.PhonePatternElement"/> with the specified key.
+        /// Gets the <see cref="global::OutlookLincAddin.Configuration.PhonePatternElement"/> with the specified key.
         /// </summary>
-        /// <param name="value">The key of the <see cref="global::OutlookLinkAddin.Configuration.PhonePatternElement"/> to retrieve.</param>
+        /// <param name="value">The key of the <see cref="global::OutlookLincAddin.Configuration.PhonePatternElement"/> to retrieve.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.1.7")]
-        public global::OutlookLinkAddin.Configuration.PhonePatternElement this[object value]
+        public global::OutlookLincAddin.Configuration.PhonePatternElement this[object value]
         {
             get
             {
-                return ((global::OutlookLinkAddin.Configuration.PhonePatternElement)(base.BaseGet(value)));
+                return ((global::OutlookLincAddin.Configuration.PhonePatternElement)(base.BaseGet(value)));
             }
         }
         #endregion
         
         #region Add
         /// <summary>
-        /// Adds the specified <see cref="global::OutlookLinkAddin.Configuration.PhonePatternElement"/> to the <see cref="global::System.Configuration.ConfigurationElementCollection"/>.
+        /// Adds the specified <see cref="global::OutlookLincAddin.Configuration.PhonePatternElement"/> to the <see cref="global::System.Configuration.ConfigurationElementCollection"/>.
         /// </summary>
-        /// <param name="pattern">The <see cref="global::OutlookLinkAddin.Configuration.PhonePatternElement"/> to add.</param>
+        /// <param name="pattern">The <see cref="global::OutlookLincAddin.Configuration.PhonePatternElement"/> to add.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.1.7")]
-        public void Add(global::OutlookLinkAddin.Configuration.PhonePatternElement pattern)
+        public void Add(global::OutlookLincAddin.Configuration.PhonePatternElement pattern)
         {
             base.BaseAdd(pattern);
         }
@@ -281,11 +307,11 @@ namespace OutlookLinkAddin.Configuration
         
         #region Remove
         /// <summary>
-        /// Removes the specified <see cref="global::OutlookLinkAddin.Configuration.PhonePatternElement"/> from the <see cref="global::System.Configuration.ConfigurationElementCollection"/>.
+        /// Removes the specified <see cref="global::OutlookLincAddin.Configuration.PhonePatternElement"/> from the <see cref="global::System.Configuration.ConfigurationElementCollection"/>.
         /// </summary>
-        /// <param name="pattern">The <see cref="global::OutlookLinkAddin.Configuration.PhonePatternElement"/> to remove.</param>
+        /// <param name="pattern">The <see cref="global::OutlookLincAddin.Configuration.PhonePatternElement"/> to remove.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.1.7")]
-        public void Remove(global::OutlookLinkAddin.Configuration.PhonePatternElement pattern)
+        public void Remove(global::OutlookLincAddin.Configuration.PhonePatternElement pattern)
         {
             base.BaseRemove(this.GetElementKey(pattern));
         }
@@ -293,23 +319,23 @@ namespace OutlookLinkAddin.Configuration
         
         #region GetItem
         /// <summary>
-        /// Gets the <see cref="global::OutlookLinkAddin.Configuration.PhonePatternElement"/> at the specified index.
+        /// Gets the <see cref="global::OutlookLincAddin.Configuration.PhonePatternElement"/> at the specified index.
         /// </summary>
-        /// <param name="index">The index of the <see cref="global::OutlookLinkAddin.Configuration.PhonePatternElement"/> to retrieve.</param>
+        /// <param name="index">The index of the <see cref="global::OutlookLincAddin.Configuration.PhonePatternElement"/> to retrieve.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.1.7")]
-        public global::OutlookLinkAddin.Configuration.PhonePatternElement GetItemAt(int index)
+        public global::OutlookLincAddin.Configuration.PhonePatternElement GetItemAt(int index)
         {
-            return ((global::OutlookLinkAddin.Configuration.PhonePatternElement)(base.BaseGet(index)));
+            return ((global::OutlookLincAddin.Configuration.PhonePatternElement)(base.BaseGet(index)));
         }
         
         /// <summary>
-        /// Gets the <see cref="global::OutlookLinkAddin.Configuration.PhonePatternElement"/> with the specified key.
+        /// Gets the <see cref="global::OutlookLincAddin.Configuration.PhonePatternElement"/> with the specified key.
         /// </summary>
-        /// <param name="value">The key of the <see cref="global::OutlookLinkAddin.Configuration.PhonePatternElement"/> to retrieve.</param>
+        /// <param name="value">The key of the <see cref="global::OutlookLincAddin.Configuration.PhonePatternElement"/> to retrieve.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.1.7")]
-        public global::OutlookLinkAddin.Configuration.PhonePatternElement GetItemByKey(string value)
+        public global::OutlookLincAddin.Configuration.PhonePatternElement GetItemByKey(string value)
         {
-            return ((global::OutlookLinkAddin.Configuration.PhonePatternElement)(base.BaseGet(((object)(value)))));
+            return ((global::OutlookLincAddin.Configuration.PhonePatternElement)(base.BaseGet(((object)(value)))));
         }
         #endregion
         

@@ -8,26 +8,31 @@
 </auto-generated>
 -->
 <xs:schema xmlns:tns="urn://i-teco/schemas/dev/outlook-lync-addin" elementFormDefault="qualified" targetNamespace="urn://i-teco/schemas/dev/outlook-lync-addin" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-	<xs:element name="outloookLyncAddin" type="tns:OutlookLinkAddin.Configuration.OutloookLyncAddinSectionCT" />
-	<xs:complexType name="OutlookLinkAddin.Configuration.OutloookLyncAddinSectionCT">
+	<xs:element name="outlookLyncAddinSection" type="tns:OutlookLincAddin.Configuration.OutlookLyncAddinSectionCT" />
+	<xs:complexType name="OutlookLincAddin.Configuration.OutlookLyncAddinSectionCT">
 		<xs:choice minOccurs="0" maxOccurs="unbounded">
-			<xs:element minOccurs="1" name="phonePatterns" type="tns:OutlookLinkAddin.Configuration.PhonePatternCollectionCT">
+			<xs:element minOccurs="1" name="phonePatterns" type="tns:OutlookLincAddin.Configuration.PhonePatternCollectionCT">
 				<xs:annotation>
 					<xs:documentation>The PhonePatterns.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:choice>
 	</xs:complexType>
-	<xs:complexType name="OutlookLinkAddin.Configuration.PhonePatternElementCT">
+	<xs:complexType name="OutlookLincAddin.Configuration.PhonePatternElementCT">
 		<xs:attribute name="value" use="required" type="xs:string">
 			<xs:annotation>
 				<xs:documentation>The Value.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
+		<xs:attribute name="regex" use="optional" type="xs:boolean">
+			<xs:annotation>
+				<xs:documentation>The Regex.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
-	<xs:complexType name="OutlookLinkAddin.Configuration.PhonePatternCollectionCT">
+	<xs:complexType name="OutlookLincAddin.Configuration.PhonePatternCollectionCT">
 		<xs:choice minOccurs="0" maxOccurs="unbounded">
-			<xs:element minOccurs="0" maxOccurs="unbounded" name="pattern" type="tns:OutlookLinkAddin.Configuration.PhonePatternElementCT">
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="pattern" type="tns:OutlookLincAddin.Configuration.PhonePatternElementCT">
 				<xs:annotation>
 					<xs:documentation>The PhonePatternElement Configuration Element.</xs:documentation>
 				</xs:annotation>
