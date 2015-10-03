@@ -17,7 +17,8 @@ namespace OutlookLyncAddin.Common
         public string Transform(string message)
         {
             MatchEvaluator replacement = m => string.Format("<a href=\"tel:{0}\">{0}</a>", m.Value);
-            return _patterns.Aggregate(message, (current, pattern) => pattern.Replace(current, replacement));
+            var result = _patterns.Aggregate(message, (current, pattern) => pattern.Replace(current, replacement));
+            return "<html><body>" + result + "</body></html>";
         }
     }
 
