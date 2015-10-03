@@ -42,6 +42,7 @@
     <Compile Include="IMessageTransformer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegexFromPatternBuilder.cs" />
+    <Compile Include="RegexRange.cs" />
     <Compile Include="SimpleMessageTransformer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
