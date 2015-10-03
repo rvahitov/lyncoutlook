@@ -16,7 +16,9 @@ namespace OutlookLyncAddin.Common
                 var len = m.Value.Length;
                 return string.Concat("\\d{", len,  "}");
             });
-            return new Regex(sharpReplacedPattern,RegexOptions.Compiled);
+            var startEnd = sharpReplacedPattern.Contains("\\s") ? "" : "\\b";
+            var regex = string.Concat(startEnd, sharpReplacedPattern, startEnd);
+            return new Regex(regex, RegexOptions.Compiled);
         }
     }
 }
