@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Linq;
+using System.Text.RegularExpressions;
 using OutlookLyncAddin.Common;
 using Xunit;
 
@@ -8,7 +10,7 @@ namespace OutlookLyncAddin.Tests
     public class SimpleMessageTransformerTest
     {
 
-        private readonly string[] _patterns = {"####", "##-##", "+# (###) ###-##-##"};
+        private readonly Regex[] _patterns = (new[]{"####", "##-##", "+# (###) ###-##-##"}).Select(RegexFromPatternBuilder.Build).ToArray();
 
         [Theory]
         [InlineData("Привет! Позвони мне по номеру - 12-34", "<html><body>Привет! Позвони мне по номеру - <a href=\"tel:12-34\">12-34</a></body></html>")]

@@ -61,6 +61,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegexFromPatternBuilderTest.cs" />
     <Compile Include="SimpleMessageTransformerTest.cs" />
+    <Compile Include="TextReplacementLocationTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
