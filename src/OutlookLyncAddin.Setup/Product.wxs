@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="*" Name="OutlookLyncAddin" Language="1033" Version="1.0.0.0" Manufacturer="I-Teco" UpgradeCode="b6f8ef1d-11af-45c1-b230-4477ad159f21">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+    <UIRef Id="WixUI_Minimal" />
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MediaTemplate />
+
+    <Feature Id="ProductFeature" Title="OutlookLyncAddin.Setup" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+      <ComponentGroupRef Id="RegestryComponents"/>
+    </Feature>
+  </Product>
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="MANUFACTURERFOLDER" Name="$(var.Manufacturer)">
+          <Directory Id="INSTALLFOLDER" Name="OutlookLyncAddin"/>
+        </Directory>
+      </Directory>
+    </Directory>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+      <!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
+      <!-- <Component Id="ProductComponent"> -->
+      <!-- TODO: Insert files, registry keys, and other resources here. -->
+      <!-- </Component> -->
+      <Component Id="AddinOutlookDll">
+        <File Source="$(var.AddinOutput)OutlookLyncAddin.dll"/>
+      </Component>
+      <Component Id="MicrosoftOfficeToolsCommonv40Utilitiesdll">
+        <File Source="$(var.AddinOutput)Microsoft.Office.Tools.Common.v4.0.Utilities.dll"/>
+      </Component>
+      <Component Id="MicrosoftOfficeToolsOutlookv40Utilitiesdll">
+        <File Source="$(var.AddinOutput)Microsoft.Office.Tools.Outlook.v4.0.Utilities.dll"/>
+      </Component>
+      <Component Id="OutlookLyncAddinCommondll">
+        <File Source="$(var.AddinOutput)OutlookLyncAddin.Common.dll"/>
+      </Component>
+      <Component Id="OutlookLyncAddindllmanifest">
+        <File Source="$(var.AddinOutput)OutlookLyncAddin.dll.manifest"/>
+      </Component>
+      <Component Id="OutlookLyncAddinvsto">
+        <File Source="$(var.AddinOutput)OutlookLyncAddin.vsto"/>
+      </Component>
+      <Component Id="addinconfigxml">
+        <File Source="$(var.AddinOutput)addin.config.xml"/>
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+  <Fragment>
+    <ComponentGroup Id="RegestryComponents" Directory="INSTALLFOLDER">
+      <Component Id="CMP_WriteAddinToRegistry32bit" Guid="D7C53C4F-7888-4EC4-8DC4-87198900E42C">
+        <RegistryKey Root="HKLM" Key="SOFTWARE\Microsoft\Office\Outlook\Addins">
+          <RegistryKey Key="[Manufacturer].OutlookLyncAddin" ForceCreateOnInstall="yes" ForceDeleteOnUninstall="yes">
+            <RegistryValue Name="FriendlyName" Type="string" Action="write" Value="OutlookLync Addin"/>
+            <RegistryValue Name="Description" Type="string" Action="write" Value=""/>
+            <RegistryValue Name="LoadBehavior" Type="integer" Action="write" Value="3"/>
+            <RegistryValue Name="Manifest" Type="string" Action="write" Value="[INSTALLFOLDER]OutlookLyncAddin.vsto"/>
+          </RegistryKey>
+        </RegistryKey>
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>
