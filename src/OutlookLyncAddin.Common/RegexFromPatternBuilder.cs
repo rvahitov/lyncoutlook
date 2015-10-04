@@ -6,7 +6,7 @@ namespace OutlookLyncAddin.Common
     {
         static readonly Regex _sharpReplace = new Regex("#+",RegexOptions.Compiled);
         static readonly Regex _whiteSpaceReplace = new Regex("\\s+", RegexOptions.Compiled);
-        static readonly Regex _escapeRegex = new Regex("[+()?.]",RegexOptions.Compiled);
+        static readonly Regex _escapeRegex = new Regex("[+()?]",RegexOptions.Compiled);
         public static Regex Build(string pattern)
         {
             var escapedPattern = _escapeRegex.Replace(pattern,m => "\\" + m.Value);
