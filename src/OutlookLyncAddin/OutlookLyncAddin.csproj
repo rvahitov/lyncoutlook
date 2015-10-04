@@ -194,6 +194,10 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\OutlookLyncAddin.Common\OutlookLyncAddin.Common.csproj">
+      <Project>{47395dde-5674-482a-ab0a-6e4e97059a6d}</Project>
+      <Name>OutlookLyncAddin.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OutlookLyncAddin.Configuration\OutlookLyncAddin.Configuration.csproj">
       <Project>{58a100ce-cc7e-43bf-a054-d28648f092ac}</Project>
       <Name>OutlookLyncAddin.Configuration</Name>
