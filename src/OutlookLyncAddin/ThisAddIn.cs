@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Microsoft.Office.Interop.Outlook;
+using Microsoft.Win32;
 using OutlookLyncAddin.Common;
 using OutlookLyncAddin.Common.Configuration;
 using Office = Microsoft.Office.Core;
@@ -69,14 +70,23 @@ namespace OutlookLyncAddin
                  (new[] { "####", "##-##", "+# (###) ###-##-##" }).Select(RegexFromPatternBuilder.Build).ToArray();
 
 
-            var thisAssembly = typeof(ThisAddIn).Assembly;
-            var assemblyLocation = thisAssembly.Location;
-            var addinDirPath = Path.GetDirectoryName(assemblyLocation);
-            Debug.Assert(addinDirPath != null, "addinDirPath != null");
-            var configPath = Path.Combine(addinDirPath, "addin.config.xml");
-            if (!File.Exists(configPath)) return defaultPatterns;
+            var configPath = GetConfigFilePath();
+            if (configPath == null || !File.Exists(configPath)) return defaultPatterns;
             var config = OutlookLyncAddinConfig.FromXml(configPath);
             return config.Patterns.Select(FromPhonePatternElement).ToArray();
+        }
+
+        private static string GetConfigFilePath()
+        {
+            var registryKey =
+                Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Office\Outlook\Addins\I-Teco.OutlookLyncAddin");
+            Debug.Assert(registryKey != null, "registryKey != null");
+            var manifestPath = Convert.ToString(registryKey.GetValue("Manifest", ""));
+            if (String.IsNullOrEmpty(manifestPath)) return null;
+            var addinDirPath = Path.GetDirectoryName(manifestPath);
+            Debug.Assert(addinDirPath != null, "addinDirPath != null");
+            var configPath = Path.Combine(addinDirPath, "addin.config.xml");
+            return configPath;
         }
 
         static Regex FromPhonePatternElement(PhonePatternConfig element)
