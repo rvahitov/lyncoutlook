@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Microsoft.Office.Interop.Outlook;
-using Microsoft.Win32;
 using OutlookLyncAddin.Common;
 using OutlookLyncAddin.Common.Configuration;
 using Office = Microsoft.Office.Core;
@@ -19,6 +16,7 @@ namespace OutlookLyncAddin
         private Explorer _activeExplorer;
         private Regex[] _phonePatterns;
         private IMessageTransformer _transformer;
+
         private void ThisAddIn_Startup(object sender, EventArgs e)
         {
             _phonePatterns = ReadPhonePatternsFromConfig().ToArray();
@@ -38,7 +36,8 @@ namespace OutlookLyncAddin
 
         private void TransformMessage(MailItem mailItem)
         {
-            if (_phonePatterns.Length == 0 || Transformed(mailItem)) return;// Не проводим трансформацию если отсутствую патерны или уже прошло трансформацию
+            if (_phonePatterns.Length == 0 || Transformed(mailItem))
+                return; // Не проводим трансформацию если отсутствую патерны или уже прошло трансформацию
             var message = mailItem.Body;
             var transformedMessage = _transformer.Transform(message);
             mailItem.HTMLBody = transformedMessage;
@@ -51,28 +50,26 @@ namespace OutlookLyncAddin
             _activeExplorer = null;
         }
 
-        static bool Transformed(MailItem mailItem)
+        private static bool Transformed(MailItem mailItem)
         {
-
             var prop = mailItem.UserProperties.Find(BeenTransformUserPropertyName);
             return prop != null && object.Equals(prop.Value, BeenTransformedValue);
         }
 
-        static void SetTransformed(MailItem mailItem)
+        private static void SetTransformed(MailItem mailItem)
         {
             var prop = mailItem.UserProperties.Add(BeenTransformUserPropertyName, OlUserPropertyType.olInteger);
             prop.Value = BeenTransformedValue;
         }
 
-        IEnumerable<Regex> ReadPhonePatternsFromConfig()
+        private IEnumerable<Regex> ReadPhonePatternsFromConfig()
         {
-
             var config = ConfigProvider.Config;
 #if DEBUG
             if (config == null)
             {
                 var defaultPatterns =
-                     (new[] { "####", "##-##", "+# (###) ###-##-##" }).Select(RegexFromPatternBuilder.Build).ToArray();
+                    (new[] {"####", "##-##", "+# (###) ###-##-##"}).Select(RegexFromPatternBuilder.Build).ToArray();
 
                 return defaultPatterns;
             }
@@ -82,7 +79,7 @@ namespace OutlookLyncAddin
         }
 
 
-        static Regex FromPhonePatternElement(PhonePatternConfig element)
+        private static Regex FromPhonePatternElement(PhonePatternConfig element)
         {
             return element.IsRegex ? new Regex(element.Value) : RegexFromPatternBuilder.Build(element.Value);
         }
