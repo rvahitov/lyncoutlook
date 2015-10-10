@@ -20,6 +20,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutlookLyncAddin.Common", "
 EndProject
 Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "OutlookLyncAddin.Setup", "OutlookLyncAddin.Setup\OutlookLyncAddin.Setup.wixproj", "{A13A8662-0F0E-43B2-BD19-2FECE16E8AEC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{2004DB22-A113-4570-8A0A-6209ABCC4CF7}"
+	ProjectSection(SolutionItems) = preProject
+		..\build.fsx = ..\build.fsx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CD_ROM|Any CPU = CD_ROM|Any CPU
