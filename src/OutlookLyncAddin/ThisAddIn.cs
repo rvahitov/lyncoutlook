@@ -66,28 +66,21 @@ namespace OutlookLyncAddin
 
         IEnumerable<Regex> ReadPhonePatternsFromConfig()
         {
-            var defaultPatterns=
-                 (new[] { "####", "##-##", "+# (###) ###-##-##" }).Select(RegexFromPatternBuilder.Build).ToArray();
 
+            var config = ConfigProvider.Config;
+#if DEBUG
+            if (config == null)
+            {
+                var defaultPatterns =
+                     (new[] { "####", "##-##", "+# (###) ###-##-##" }).Select(RegexFromPatternBuilder.Build).ToArray();
 
-            var configPath = GetConfigFilePath();
-            if (configPath == null || !File.Exists(configPath)) return defaultPatterns;
-            var config = OutlookLyncAddinConfig.FromXml(configPath);
+                return defaultPatterns;
+            }
+
+#endif
             return config.Patterns.Select(FromPhonePatternElement).ToArray();
         }
 
-        private static string GetConfigFilePath()
-        {
-            var registryKey =
-                Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Office\Outlook\Addins\I-Teco.OutlookLyncAddin");
-            Debug.Assert(registryKey != null, "registryKey != null");
-            var manifestPath = Convert.ToString(registryKey.GetValue("Manifest", ""));
-            if (String.IsNullOrEmpty(manifestPath)) return null;
-            var addinDirPath = Path.GetDirectoryName(manifestPath);
-            Debug.Assert(addinDirPath != null, "addinDirPath != null");
-            var configPath = Path.Combine(addinDirPath, "addin.config.xml");
-            return configPath;
-        }
 
         static Regex FromPhonePatternElement(PhonePatternConfig element)
         {

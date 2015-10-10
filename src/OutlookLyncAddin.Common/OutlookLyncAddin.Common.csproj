@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\ConfigProvider.cs" />
     <Compile Include="IMessageTransformer.cs" />
     <Compile Include="Configuration\PhonePatternConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
