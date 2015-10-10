@@ -1,6 +1,11 @@
+*.vspscc
+*.DotSettings
+*.user
 *.suo
 [Oo]bj
 [Bb]in
 *.user
 [Pp]ackages
 [Pp]ublish
+.paket/paket.exe
+paket.lock
