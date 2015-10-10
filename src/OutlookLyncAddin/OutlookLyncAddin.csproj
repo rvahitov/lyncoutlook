@@ -240,7 +240,6 @@
   <PropertyGroup>
     <ManifestCertificateThumbprint>6B2F690508FE195CDE92F20FA5E59B04D5372FF6</ManifestCertificateThumbprint>
   </PropertyGroup>
-  <PropertyGroup />
   <!-- Include the build rules for a C# project. -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- Include additional build rules for an Office application add-in. -->
