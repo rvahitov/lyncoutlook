@@ -14,11 +14,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
-<<<<<<< HEAD
     <DefineConstants>AddinOutput=..\..\build\;Manufacturer=I-Teco</DefineConstants>
-=======
-    <DefineConstants>AddinOutput=..\OutlookLyncAddin\bin\Debug\;Manufacturer=I-Teco</DefineConstants>
->>>>>>> parent of ba5e405... Changed preprocessor variable "AddinOutput"
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <OutputPath>bin\$(Configuration)\</OutputPath>
