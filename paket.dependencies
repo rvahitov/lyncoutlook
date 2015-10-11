@@ -1,6 +1,7 @@
 source https://www.nuget.org/api/v2/
 
 nuget Fake
+nuget FSharp.Data
 nuget xunit 2.1.0 framework: >= net452
 nuget xunit.abstractions 2.0.0 framework: >= net452
 nuget xunit.assert 2.1.0 framework: >= net452
