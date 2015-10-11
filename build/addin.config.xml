@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<outlookLyncAddin>
-  <patterrns>
-    <pattern value="####" regex="false" />
-    <pattern value="##-##" regex="false" />
-    <pattern value="+# (###) ###-##-##" regex="false" />
-  </patterrns>
-</outlookLyncAddin>
