@@ -26,6 +26,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{2004DB22
 		..\build.fsx = ..\build.fsx
 	EndProjectSection
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "OutlookLyncAddin.Html", "OutlookLyncAddin.Html\OutlookLyncAddin.Html.fsproj", "{DDF00AEA-A064-46E4-9E17-52FA86DE9D7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CD_ROM|Any CPU = CD_ROM|Any CPU
@@ -170,6 +172,31 @@ Global
 		{A13A8662-0F0E-43B2-BD19-2FECE16E8AEC}.SingleImage|Mixed Platforms.Build.0 = Release|x86
 		{A13A8662-0F0E-43B2-BD19-2FECE16E8AEC}.SingleImage|x86.ActiveCfg = Release|x86
 		{A13A8662-0F0E-43B2-BD19-2FECE16E8AEC}.SingleImage|x86.Build.0 = Release|x86
+		{DDF00AEA-A064-46E4-9E17-52FA86DE9D7C}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{DDF00AEA-A064-46E4-9E17-52FA86DE9D7C}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{DDF00AEA-A064-46E4-9E17-52FA86DE9D7C}.CD_ROM|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{DDF00AEA-A064-46E4-9E17-52FA86DE9D7C}.CD_ROM|Mixed Platforms.Build.0 = Release|Any CPU
+		{DDF00AEA-A064-46E4-9E17-52FA86DE9D7C}.CD_ROM|x86.ActiveCfg = Release|Any CPU
+		{DDF00AEA-A064-46E4-9E17-52FA86DE9D7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDF00AEA-A064-46E4-9E17-52FA86DE9D7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDF00AEA-A064-46E4-9E17-52FA86DE9D7C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{DDF00AEA-A064-46E4-9E17-52FA86DE9D7C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{DDF00AEA-A064-46E4-9E17-52FA86DE9D7C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DDF00AEA-A064-46E4-9E17-52FA86DE9D7C}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDF00AEA-A064-46E4-9E17-52FA86DE9D7C}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{DDF00AEA-A064-46E4-9E17-52FA86DE9D7C}.DVD-5|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{DDF00AEA-A064-46E4-9E17-52FA86DE9D7C}.DVD-5|Mixed Platforms.Build.0 = Debug|Any CPU
+		{DDF00AEA-A064-46E4-9E17-52FA86DE9D7C}.DVD-5|x86.ActiveCfg = Debug|Any CPU
+		{DDF00AEA-A064-46E4-9E17-52FA86DE9D7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDF00AEA-A064-46E4-9E17-52FA86DE9D7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDF00AEA-A064-46E4-9E17-52FA86DE9D7C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{DDF00AEA-A064-46E4-9E17-52FA86DE9D7C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{DDF00AEA-A064-46E4-9E17-52FA86DE9D7C}.Release|x86.ActiveCfg = Release|Any CPU
+		{DDF00AEA-A064-46E4-9E17-52FA86DE9D7C}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{DDF00AEA-A064-46E4-9E17-52FA86DE9D7C}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{DDF00AEA-A064-46E4-9E17-52FA86DE9D7C}.SingleImage|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{DDF00AEA-A064-46E4-9E17-52FA86DE9D7C}.SingleImage|Mixed Platforms.Build.0 = Release|Any CPU
+		{DDF00AEA-A064-46E4-9E17-52FA86DE9D7C}.SingleImage|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
