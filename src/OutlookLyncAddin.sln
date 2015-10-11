@@ -22,6 +22,7 @@ Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "OutlookLyncAddin.Setup", "O
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{2004DB22-A113-4570-8A0A-6209ABCC4CF7}"
 	ProjectSection(SolutionItems) = preProject
+		..\build.bat = ..\build.bat
 		..\build.fsx = ..\build.fsx
 	EndProjectSection
 EndProject

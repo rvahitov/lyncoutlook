@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+  <head>
+    <title>xUnit.net Test Results</title>
+    <style type="text/css">
+          body { font-family: Calibri, Verdana, Arial, sans-serif; background-color: White; color: Black; }
+          h2,h3,h4,h5 { margin: 0; padding: 0; }
+          h3 { font-weight: normal; }
+          h4 { margin: 0.5em 0; }
+          h5 { font-weight: normal; font-style: italic; margin-bottom: 0.75em; }
+          h6 { font-size: 0.9em; font-weight: bold; margin: 0.5em 0 0 0.75em; padding: 0; }
+          pre,table { font-family: Consolas; font-size: 0.8em; margin: 0 0 0 1em; padding: 0; }
+          table { padding-bottom: 0.25em; }
+          th { padding: 0 0.5em; border-right: 1px solid #bbb; text-align: left; }
+          td { padding-left: 0.5em; }
+          .divided { border-top: solid 1px #f0f5fa; padding-top: 0.5em; }
+          .row, .altrow { padding: 0.1em 0.3em; }
+          .row { background-color: #f0f5fa; }
+          .altrow { background-color: #e1ebf4; }
+          .success, .failure, .skipped { font-family: Arial Unicode MS; font-weight: normal; float: left; width: 1em; display: block; }
+          .success { color: #0c0; }
+          .failure { color: #c00; }
+          .skipped { color: #cc0; }
+          .timing { float: right; }
+          .indent { margin: 0.25em 0 0.5em 2em; }
+          .clickable { cursor: pointer; }
+          .testcount { font-size: 85%; }
+        </style>
+    <script language="javascript">
+          function ToggleClass(id) {
+            var elem = document.getElementById(id);
+            if (elem.style.display == "none") {
+              elem.style.display = "block";
+            }
+            else {
+              elem.style.display = "none";
+            }
+          }
+        </script>
+  </head>
+  <body>
+    <h3 class="divided">
+      <b>Assemblies Run</b>
+    </h3>
+    <div>C:\dev\lyncoutlook\build\tests\OutlookLyncAddin.Tests.DLL</div>
+    <h3 class="divided">
+      <b>Summary</b>
+    </h3>
+    <div>
+          Tests run: <a href="#all"><b>40</b></a>  
+          
+          Run time: <b>1.339s</b></div>
+    <br />
+    <h2>
+      <a id="all" />All tests
+        </h2>
+    <h5>Click test class name to expand/collapse test details</h5>
+    <h3>
+      <span class="timing">0.782s
+            </span>
+      <span class="clickable" onclick="ToggleClass('classID0EYAAC')" ondblclick="ToggleClass('classID0EYAAC')">
+        <span class="success">✔</span>
+               OutlookLyncAddin.Tests.OutlookLyncAddinConfigTest
+               <span class="testcount">
+                (1 test)
+              </span></span>
+      <br clear="all" />
+    </h3>
+    <div class="indent" style="display: none;" id="classID0EYAAC">
+      <div class="row">
+        <span class="timing">0.7819747s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.OutlookLyncAddinConfigTest.Serialization<br clear="all" /></div>
+    </div>
+    <h3>
+      <span class="timing">0.251s
+            </span>
+      <span class="clickable" onclick="ToggleClass('classID0E6D')" ondblclick="ToggleClass('classID0E6D')">
+        <span class="success">✔</span>
+               OutlookLyncAddin.Tests.RegexFromPatternBuilderTest
+               <span class="testcount">
+                (19 tests)
+              </span></span>
+      <br clear="all" />
+    </h3>
+    <div class="indent" style="display: none;" id="classID0E6D">
+      <div class="row">
+        <span class="timing">0.0000939s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.RegexFromPatternBuilderTest.BuildNegative(pattern: "#", result: "#")<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">0.1948075s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.RegexFromPatternBuilderTest.BuildNegative(pattern: "###", result: "###")<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">0.0001992s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.RegexFromPatternBuilderTest.BuildNegative(pattern: "###-##", result: "###-##")<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">0.0105135s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.RegexFromPatternBuilderTest.BuildNegative(pattern: "+# (###) ###-##-##", result: "+# (###) ###-##-##")<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">0.0016583s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.RegexFromPatternBuilderTest.BuildPositive(pattern: "#", result: "\b\d{1}\b")<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">0.0001128s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.RegexFromPatternBuilderTest.BuildPositive(pattern: "###", result: "\b\d{3}\b")<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">0.0000863s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.RegexFromPatternBuilderTest.BuildPositive(pattern: "###-##", result: "\b\d{3}-\d{2}\b")<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">0.0001475s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.RegexFromPatternBuilderTest.BuildPositive(pattern: "+# (###) ###-##-##", result: "\+\d{1}\s*\(\d{3}\)\s*\d{3}-\d{2}-\d{2}")<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">0.0009078s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.RegexFromPatternBuilderTest.ParseNegative(pattern: "#", input: "A")<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">0.0029941s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.RegexFromPatternBuilderTest.ParseNegative(pattern: "###", input: "1235")<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">0.003878s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.RegexFromPatternBuilderTest.ParseNegative(pattern: "###-##", input: "1233-aa")<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">0.0034939s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.RegexFromPatternBuilderTest.ParseNegative(pattern: "#5", input: "30")<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">0.0070728s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.RegexFromPatternBuilderTest.ParseNegative(pattern: "+# (###) ###-##-##", input: "++9(98s)123-45-67")<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">0.0021477s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.RegexFromPatternBuilderTest.ParsePositive(pattern: "#", input: "9")<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">0.0034315s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.RegexFromPatternBuilderTest.ParsePositive(pattern: "###", input: "123")<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">0.0059817s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.RegexFromPatternBuilderTest.ParsePositive(pattern: "###-##", input: "123-45")<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">0.0022307s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.RegexFromPatternBuilderTest.ParsePositive(pattern: "#5", input: "25")<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">0.0043994s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.RegexFromPatternBuilderTest.ParsePositive(pattern: "+# (###) ###-##-##", input: "+7  (985)  123-45-67")<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">0.0070332s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.RegexFromPatternBuilderTest.ParsePositive(pattern: "+# (###) ###-##-##", input: "+7(985)123-45-67")<br clear="all" /></div>
+    </div>
+    <h3>
+      <span class="timing">0.086s
+            </span>
+      <span class="clickable" onclick="ToggleClass('classID0EYH')" ondblclick="ToggleClass('classID0EYH')">
+        <span class="success">✔</span>
+               OutlookLyncAddin.Tests.SimpleMessageTransformerTest
+               <span class="testcount">
+                (4 tests)
+              </span></span>
+      <br clear="all" />
+    </h3>
+    <div class="indent" style="display: none;" id="classID0EYH">
+      <div class="row">
+        <span class="timing">0.0145471s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.SimpleMessageTransformerTest.PositiveTest(message: "Привет! Как дела? У меня сменился номер телефона.\r"..., result: "&lt;html&gt;&lt;body&gt;Привет! Как дела? У меня сменился номе"...)<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">0.0081161s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.SimpleMessageTransformerTest.PositiveTest(message: "Привет! Позвони мне по номеру - 1234", result: "&lt;html&gt;&lt;body&gt;Привет! Позвони мне по номеру - &lt;a hre"...)<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">0.0081666s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.SimpleMessageTransformerTest.PositiveTest(message: "Привет! Позвони мне по номеру - 12-34", result: "&lt;html&gt;&lt;body&gt;Привет! Позвони мне по номеру - &lt;a hre"...)<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">0.0551581s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.SimpleMessageTransformerTest.PositiveTest(message: "Рабочий телефон: 5678; Мобильный: +7(908)111-23-99", result: "&lt;html&gt;&lt;body&gt;Рабочий телефон: &lt;a href="tel:5678"&gt;56"...)<br clear="all" /></div>
+    </div>
+    <h3>
+      <span class="timing">0.004s
+            </span>
+      <span class="clickable" onclick="ToggleClass('classID0EY')" ondblclick="ToggleClass('classID0EY')">
+        <span class="success">✔</span>
+               OutlookLyncAddin.Tests.TextReplacementLocationTest
+               <span class="testcount">
+                (16 tests)
+              </span></span>
+      <br clear="all" />
+    </h3>
+    <div class="indent" style="display: none;" id="classID0EY">
+      <div class="row">
+        <span class="timing">0.0014249s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.TextReplacementLocationTest.TestContainsNegative(startLeft: 1, lengthLeft: 10, startRight: 5, lengthRight: 7)<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">0.0000098s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.TextReplacementLocationTest.TestContainsNegative(startLeft: 2, lengthLeft: 12, startRight: 5, lengthRight: 11)<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">0.0000441s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.TextReplacementLocationTest.TestContainsNegative(startLeft: 3, lengthLeft: 5, startRight: 4, lengthRight: 5)<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">0.0000094s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.TextReplacementLocationTest.TestContainsPositive(startLeft: 1, lengthLeft: 10, startRight: 5, lengthRight: 4)<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">0.0003023s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.TextReplacementLocationTest.TestContainsPositive(startLeft: 2, lengthLeft: 12, startRight: 5, lengthRight: 5)<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">0.0000126s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.TextReplacementLocationTest.TestContainsPositive(startLeft: 3, lengthLeft: 5, startRight: 4, lengthRight: 4)<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">0.000007s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.TextReplacementLocationTest.TestEqualsNegative(start: 1, length: 2)<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">0.00159s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.TextReplacementLocationTest.TestEqualsNegative(start: 2, length: 2)<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">0.0000078s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.TextReplacementLocationTest.TestEqualsNegative(start: -2147483648, length: 2147483647)<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">0.000007s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.TextReplacementLocationTest.TestEqualsNegative(start: 3, length: 2)<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">0.0000192s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.TextReplacementLocationTest.TestEqualsNegative(start: 4, length: 1)<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">0.0000134s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.TextReplacementLocationTest.TestEqualsPositive(start: 1, length: 2)<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">0.0000074s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.TextReplacementLocationTest.TestEqualsPositive(start: 2, length: 2)<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">0.0004282s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.TextReplacementLocationTest.TestEqualsPositive(start: -2147483648, length: 2147483647)<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">0.0000066s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.TextReplacementLocationTest.TestEqualsPositive(start: 3, length: 2)<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">0.0000066s
+        </span>
+        <span class="success">✔</span>
+       OutlookLyncAddin.Tests.TextReplacementLocationTest.TestEqualsPositive(start: 4, length: 1)<br clear="all" /></div>
+    </div>
+  </body>
+</html>
