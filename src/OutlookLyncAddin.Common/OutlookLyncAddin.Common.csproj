@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration\ConfigProvider.cs" />
+    <Compile Include="Configuration\OutlookLyncAddinConfig.cs" />
+    <Compile Include="Configuration\PhonePatternCollectionConfig.cs" />
     <Compile Include="IMessageTransformer.cs" />
     <Compile Include="Configuration\PhonePatternConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
